@@ -1,0 +1,109 @@
+:root {
+  --main-color: #2196f3;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.game {
+  background-color: #eee;
+  min-height: 100vh;
+}
+.container {
+  margin: auto;
+  max-width: 900px;
+}
+.name {
+  background-color: var(--main-color);
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+.message {
+  background-color: white;
+  padding: 15px;
+  margin: 15px 0;
+  text-align: center;
+}
+.message span {
+  font-weight: bold;
+  color: green;
+}
+.message span::before {
+  content: '[ ';
+}
+.message span::after {
+  content: ' ]';
+}
+.start {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+  background-color: #009688;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+.the-word {
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--main-color);
+  user-select: none;
+  text-align: center;
+  margin: 15px 0;
+}
+.input {
+  display: block;
+  margin: 15px 0;
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  border: 3px solid var(--main-color);
+  caret-color: var(--main-color);
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 6px;
+  outline: none;
+}
+.upcoming-words {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.upcoming-words div {
+  padding: 10px;
+  background-color: var(--main-color);
+  margin: 4px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+}
+.control {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+}
+.control span {
+  font-weight: bold;
+  color: #009688;
+}
+.finish {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 15px;
+  text-align: center;
+}
+.finish .good {
+  color: var(--main-color);
+}
+.finish .bad {
+  color: red;
+}
