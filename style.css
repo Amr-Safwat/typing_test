@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 body {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
 .game {
@@ -54,7 +55,7 @@ body {
   color: var(--main-color);
   user-select: none;
   text-align: center;
-  margin: 25px 0;
+  margin: 20px 0;
 }
 .input {
   display: block;
@@ -102,7 +103,7 @@ body {
   text-align: center;
 }
 .finish .good {
-  color: var(--main-color);
+  color: green;
 }
 .finish .bad {
   color: red;
