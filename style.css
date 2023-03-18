@@ -54,7 +54,7 @@ body {
   color: var(--main-color);
   user-select: none;
   text-align: center;
-  margin: 15px 0;
+  margin: 25px 0;
 }
 .input {
   display: block;
