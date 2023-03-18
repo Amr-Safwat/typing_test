@@ -1,35 +1,35 @@
 // Array Of Words
 const words = [
 	'Hello',
-	'Programming',
-	'Code',
-	'Javascript',
-	'Town',
-	'Country',
-	'Testing',
-	'Youtube',
-	'Linkedin',
-	'Twitter',
-	'Github',
-	'Leetcode',
-	'Internet',
-	'Python',
-	'Scala',
-	'Destructuring',
-	'Paradigm',
-	'Styling',
-	'Cascade',
-	'Documentation',
-	'Coding',
-	'Funny',
-	'Working',
-	'Dependencies',
-	'Task',
-	'Runner',
-	'Roles',
-	'Test',
-	'Rust',
-	'Playing',
+	// 'Programming',
+	// 'Code',
+	// 'Javascript',
+	// 'Town',
+	// 'Country',
+	// 'Testing',
+	// 'Youtube',
+	// 'Linkedin',
+	// 'Twitter',
+	// 'Github',
+	// 'Leetcode',
+	// 'Internet',
+	// 'Python',
+	// 'Scala',
+	// 'Destructuring',
+	// 'Paradigm',
+	// 'Styling',
+	// 'Cascade',
+	// 'Documentation',
+	// 'Coding',
+	// 'Funny',
+	// 'Working',
+	// 'Dependencies',
+	// 'Task',
+	// 'Runner',
+	// 'Roles',
+	// 'Test',
+	// 'Rust',
+	// 'Playing',
 ];
 
 // Setting Levels
@@ -110,13 +110,15 @@ function startPlay() {
 				if (words.length > 0) {
 					generateWords();
 				} else {
+          finish.style.display = 'block';
 					let span = document.createElement('span');
-					let txtSpan = document.createTextNode('congratulations🥳');
+					let txtSpan = document.createTextNode('🥳congratulations');
 					span.className = 'good';
 					span.appendChild(txtSpan);
 					finish.appendChild(span);
 				}
 			} else {
+        finish.style.display = 'block';
 				let span = document.createElement('span');
 				let txtSpan = document.createTextNode('Game Over');
 				span.className = 'bad';
