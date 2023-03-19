@@ -71,6 +71,27 @@ body {
   border-radius: 6px;
   outline: none;
 }
+.checkbox {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+.checkbox input {
+  appearance: none;
+}
+.checkbox input:checked + label {
+  color: var(--main-color);
+  border-color: var(--main-color);
+  border-width: 2px;
+}
+.checkbox label {
+  display: block;
+  color: black;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+}
 .upcoming-words {
   margin: 15px 0;
   padding: 15px;
