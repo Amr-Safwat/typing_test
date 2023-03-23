@@ -1,35 +1,35 @@
 // Array Of Words
 const words = [
 	'Hello',
-	'Programming',
-	'Code',
-	'Javascript',
-	'Town',
-	'Country',
-	'Testing',
-	'Youtube',
-	'Linkedin',
-	'Twitter',
-	'Github',
-	'Leetcode',
-	'Internet',
-	'Python',
-	'Scala',
-	'Destructuring',
-	'Paradigm',
-	'Styling',
-	'Cascade',
-	'Documentation',
-	'Coding',
-	'Funny',
-	'Working',
-	'Dependencies',
-	'Task',
-	'Runner',
-	'Roles',
-	'Test',
-	'Rust',
-	'Playing',
+	// 'Programming',
+	// 'Code',
+	// 'Javascript',
+	// 'Town',
+	// 'Country',
+	// 'Testing',
+	// 'Youtube',
+	// 'Linkedin',
+	// 'Twitter',
+	// 'Github',
+	// 'Leetcode',
+	// 'Internet',
+	// 'Python',
+	// 'Scala',
+	// 'Destructuring',
+	// 'Paradigm',
+	// 'Styling',
+	// 'Cascade',
+	// 'Documentation',
+	// 'Coding',
+	// 'Funny',
+	// 'Working',
+	// 'Dependencies',
+	// 'Task',
+	// 'Runner',
+	// 'Roles',
+	// 'Test',
+	// 'Rust',
+	// 'Playing',
 ];
 
 // Setting Levels
@@ -75,7 +75,6 @@ hard.onclick = () => {
 		// Default Level
 		defaultLevelName = hard.value;
 		defaultLevelSeconds = Levels[defaultLevelName];
-		console.log(defaultLevelSeconds);
 		levelName.innerHTML = defaultLevelName;
 		seconds.innerHTML = defaultLevelSeconds;
 		timeLeft.innerHTML = defaultLevelSeconds;
@@ -93,6 +92,8 @@ let timeLeft = document.querySelector('.time span');
 let scoreGot = document.querySelector('.score .got');
 let scoreTotal = document.querySelector('.score .total');
 let finish = document.querySelector('.finish');
+
+let btn = document.querySelector('.icon');
 
 // Setting Levels + Seconds + Score
 levelName.innerHTML = defaultLevelName;
@@ -137,9 +138,10 @@ function showWords() {
 		upComingWords.appendChild(div);
 	}
 }
+timeLeft.innerHTML = defaultLevelSeconds;
 
 function startPlay() {
-	timeLeft.innerHTML = scoreGot.innerHTML === '0'?defaultLevelSeconds+=3:defaultLevelSeconds;
+		timeLeft.innerHTML = scoreGot.innerHTML === '0'?defaultLevelSeconds+3:defaultLevelSeconds;
 	let id = setInterval(() => {
 		timeLeft.innerHTML--;
 		if (timeLeft.innerHTML === '0') {
@@ -161,24 +163,36 @@ function startPlay() {
 			}
 		}
 	}, 1000);
+
 }
-console.log(scoreGot);
+
 function showGood() {
 	finish.style.display = 'block';
 	let span = document.createElement('span');
-	let txtSpan = document.createTextNode('🥳congratulations');
+	let btn = document.createElement('i');
+	let txtSpan = document.createTextNode('Good🥳');
 	span.className = 'good';
+	btn.className = 'fa-solid fa-rotate-right icon';
 	span.appendChild(txtSpan);
 	finish.appendChild(span);
+	finish.appendChild(btn);
+	btn.onclick = () => {
+		location.reload();
+	}
 }
 
 function showBad() {
 	finish.style.display = 'block';
 	let span = document.createElement('span');
+	let btn = document.createElement('i');
 	let txtSpan = document.createTextNode('Game Over');
 	span.className = 'bad';
+		btn.className = 'fa-solid fa-rotate-right icon';
 	span.appendChild(txtSpan);
 	finish.appendChild(span);
+	finish.appendChild(btn);
+	btn.onclick = () => {
+		location.reload();
+	}
 }
 
-// console.log(Levels['Normal']);

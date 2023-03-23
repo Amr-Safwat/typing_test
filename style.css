@@ -127,18 +127,26 @@ body {
   border-radius: 20px;
   font-size: 40px;
   font-weight: bold;
-  padding: 40px;
+  padding: 30px 34px;
   text-align: center;
   display: none;
 }
 .finish .good {
   color: green;
+  display: block;
 }
 .finish .bad {
   color: red;
+  display: block;
 }
 @media (max-width: 767px) {
   .finish {
     font-size: 30px;
   }
+}
+.finish .icon {
+  background-color: var(--main-color);
+  padding: 5px 8px;
+  border-radius: 6px;
+  margin-top: 10px;
 }
